@@ -1,0 +1,51 @@
+{
+	"home": {
+		"title": "Daniel Heim",
+		"subtitle": "Software Engineer Extraordinaire",
+		"desc": "I am an experienced developer with a passion for crafting elegant solutions and engaging experiences.",
+		"socials": [
+			{
+				"id": "linkedin",
+				"title": "LinkedIn",
+				"href": "https://www.linkedin.com/in/danielheim"
+			},
+			{
+				"id": "twitter",
+				"title": "Twitter",
+				"href": "https://twitter.com/danielheim82"
+			},
+			{
+				"id": "github",
+				"title": "GitHub",
+				"href": "https://github.com/danielheim"
+			}
+		]
+	},
+	"about": {
+		"title": "Who I am",
+		"desc": "I am a software engineer with a passion for creating awesome things. I have experience with a wide range of technologies, including game development, mobile development, and web development."
+	},
+	"services": {
+		"title": "What I do",
+		"items": [
+			{
+				"id": "game",
+				"title": "Game Development",
+				"desc": "I have experience with game development, including Unity3D, C#, and JavaScript."
+			},
+			{
+				"id": "mobile",
+				"title": "Mobile Development",
+				"desc": "I have experience with both native (Android, iOS) and hybrid mobile (Xamarin, React Native) development."
+			},
+			{
+				"id": "web",
+				"title": "Web Development",
+				"desc": "I have experience with a wide range of web technologies, including the latest in HTML, CSS and JavaScript/Typescript."
+			}
+		]
+	},
+	"work": {
+		"title": "What I've done"
+	}
+}

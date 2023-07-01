@@ -1,9 +1,22 @@
+import { Outlet } from 'react-router';
 import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <p>It may not look like much, but it's got it where it counts, kid.</p>
+    <div className="app">
+      {/* <header>
+        <p>Daniel Heim</p>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/work">Work</a></li>
+          </ul>
+        </nav>
+      </header> */}
+      <Outlet />
+      <footer>
+        <p>&copy; Daniel Heim</p>
+      </footer>
     </div>
   );
 }

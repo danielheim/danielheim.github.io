@@ -1,0 +1,25 @@
+#home {
+	
+	> *:first-child {
+		position: sticky;
+		top: 0;
+	}
+	
+	@media screen and (min-width: 900px) {
+		display: grid;
+		grid-template-columns: 1fr 1.5fr;
+		gap: 2em;
+
+		// > *:first-child {
+		// 	// margin-right: 66%;
+		// 	// float: left;
+		// 	width: 33%;
+		// }
+
+		// > *:last-child {
+		// 	margin-left: 33%;
+		// 	// float: right;
+		// 	width: 66%;
+		// }
+	}
+}
