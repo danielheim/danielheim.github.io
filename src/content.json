@@ -2,7 +2,7 @@
 	"home": {
 		"title": "Daniel Heim",
 		"subtitle": "Software Engineer Extraordinaire",
-		"desc": "I am an experienced developer with a passion for crafting elegant solutions and engaging experiences.",
+		"desc": "An experienced developer with a passion for crafting elegant solutions and engaging experiences.",
 		"socials": [
 			{
 				"id": "linkedin",
@@ -23,7 +23,7 @@
 	},
 	"about": {
 		"title": "Who I am",
-		"desc": "I am a software engineer with a passion for creating awesome things. I have experience with a wide range of technologies, including game development, mobile development, and web development."
+		"desc": "I've been immersed in the world of software development since I was young, constantly sharpening my skills and adapting with the ever-changing industry. I'm hooked on the dynamic nature of this field and I love tackling the challenges that come with each new advancement.\nAs a <strong>Senior Software Developer</strong> at <strong>Millipede</strong>, I have worked alongside some of the big shots in the Australian tech scene. It's given me invaluable insights into large-scale software development projects and the opportunity to contribute to cutting-edge solutions."
 	},
 	"services": {
 		"title": "What I do",
@@ -31,17 +31,20 @@
 			{
 				"id": "game",
 				"title": "Game Development",
-				"desc": "I have experience with game development, including Unity3D, C#, and JavaScript."
+				"desc": "I have experience with game development, including Unity3D, C#, and JavaScript.",
+				"img": "what-game-dev.svg"
 			},
 			{
 				"id": "mobile",
 				"title": "Mobile Development",
-				"desc": "I have experience with both native (Android, iOS) and hybrid mobile (Xamarin, React Native) development."
+				"desc": "I have experience with both native (Android, iOS) and hybrid mobile (Xamarin, React Native) development.",
+				"img": "what-game-dev.svg"
 			},
 			{
 				"id": "web",
 				"title": "Web Development",
-				"desc": "I have experience with a wide range of web technologies, including the latest in HTML, CSS and JavaScript/Typescript."
+				"desc": "I have experience with a wide range of web technologies, including the latest in HTML, CSS and JavaScript/Typescript.",
+				"img": "what-game-dev.svg"
 			}
 		]
 	},

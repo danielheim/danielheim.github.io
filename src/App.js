@@ -15,7 +15,9 @@ function App() {
       </header> */}
       <Outlet />
       <footer>
+        <div className='section'>
         <p>&copy; Daniel Heim</p>
+        </div>
       </footer>
     </div>
   );

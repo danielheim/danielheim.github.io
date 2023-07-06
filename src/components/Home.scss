@@ -1,25 +1,55 @@
+@use '../../node_modules/sass-mq/mq' with (
+  $media-type: screen
+);
+
 #home {
-	
-	> *:first-child {
-		position: sticky;
-		top: 0;
-	}
-	
-	@media screen and (min-width: 900px) {
-		display: grid;
-		grid-template-columns: 1fr 1.5fr;
-		gap: 2em;
 
-		// > *:first-child {
-		// 	// margin-right: 66%;
-		// 	// float: left;
-		// 	width: 33%;
-		// }
-
-		// > *:last-child {
-		// 	margin-left: 33%;
-		// 	// float: right;
-		// 	width: 66%;
-		// }
+	article {
+		img {
+			display: block;
+			margin: 0 auto;
+			max-height: 100px;
+			aspect-ratio: 1;
+		}
 	}
+
+	#services {
+		.articles {
+			@include mq.mq($from: desktop) {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 2em;
+			}
+
+			article {
+
+				gap: 0.5em;
+
+				display: flex;
+				flex-direction: column;
+				
+				@include mq.mq($from: tablet, $until: desktop) {
+					display: grid;
+					grid-template-columns: 1fr 5fr;
+					align-items: center;
+				}
+			}
+		}
+	}
+
+	#socials {
+		display: flex;
+		gap: 1em;
+		list-style: none;
+		padding: 0;
+		
+		svg {
+			width: 24px;
+			height: 24px;
+			@include mq.mq($until: desktop) {
+				width: 44px;
+				height: 44px;
+			}
+		}
+	}	
 }

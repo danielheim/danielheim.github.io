@@ -1,25 +1,38 @@
 import { useLoaderData } from "react-router";
 import './Home.scss';
 
+import { ReactComponent as GithubSvg } from '../images/github.svg';
+import { ReactComponent as LinkedinSvg } from '../images/linkedin.svg';
+import { ReactComponent as TwitterSvg } from '../images/twitter.svg';
+
 function Content(props) {
 
 	function Items(props) {
 		return <article key={props.id} id={props.id}>
-			<header>
-				<h1>{props.title}</h1>
-			</header>
 			<div>
-				{props.desc.split(/\n+/g).map((desc, index) => <p key={index}>{desc}</p>)}
+				{ props.img && <img src={props.img} alt='*' /> }
+			</div>
+			<div>
+				<header>
+					<h1>{props.title}</h1>
+				</header>
+				<div>
+					{props.desc.split(/\n+/g).map((desc, index) => <p key={index}>{desc}</p>)}
+				</div>
 			</div>
 		</article>
 	}
 
-	return <section id={props.id}>
-		<h1>{props.title}</h1>
+	return <section id={props.id} className='section'>
+		<header>
+			<h1>{props.title}</h1>
+		</header>
 		{props.desc && <div>
-			{props.desc.split(/\n+/g).map((desc, index) => <p key={index}>{desc}</p>)}
+			{props.desc.split(/\n+/g).map((desc, index) => <p key={index} dangerouslySetInnerHTML={{__html: desc}} />)}
 		</div>}
-		{props.items?.map(i => <Items key={i.id} {...i} />)}
+		{ props.items?.length > 0 && <div className='articles'>
+			{props.items?.map(i => <Items key={i.id} {...i} />)}
+		</div> }
 	</section>
 }
 
@@ -32,22 +45,31 @@ function Home() {
 	} = useLoaderData();
 
 	const parseSocial = (social) => {
+
+		const svg = (() => { switch (social.id) {
+			case 'github': return <GithubSvg />;
+			case 'linkedin': return <LinkedinSvg />;
+			case 'twitter': return <TwitterSvg />;
+			default: return null;
+		}})();
+
 		return <li key={social.id} id={social.id}>
 			<a
 				href={social.href}
 				target='_blank'
 				rel='noopener noreferrer'>
-				{social.title}
+				{/* <img src={imgSrc} role='presentation' /> */}
+				{svg}
 			</a>
 		</li>
 	}
 
 	return <main id='home'>
-		<div>
+		<div className='section'>
 			<header>
 				<h1>{home.title}</h1>
-				<p>{home.subtitle}</p>
-				<p>{home.desc}</p>
+				<p className='subtitle'>{home.subtitle}</p>
+				<p dangerouslySetInnerHTML={{ __html: home.desc }} />
 			</header>
 			<ul id='socials'>
 				{home.socials.map(parseSocial)}

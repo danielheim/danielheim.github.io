@@ -5,7 +5,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import Home from './components/Home';
 
-//import 'normalize.css';
+import 'normalize.css';
 import './index.scss';
 
 import content from './content.json';

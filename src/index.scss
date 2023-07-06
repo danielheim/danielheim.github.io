@@ -1,15 +1,21 @@
+// @use '../node_modules/sass-mq/mq' with (
+//   $media-type: screen
+// );
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aleo&family=Outfit&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Aleo&family=Outfit&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Aleo', sans-serif;
+  font-family: 'Aleo', serif;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
 
   background-color: #1f1b29;
-  color: #aaaaaa;
+  color: #888888;
+
+  min-width: 240px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,7 +24,18 @@ h1, h2, h3, h4, h5, h6 {
   color: #eeeeee;
 }
 
-a {
+.subtitle, article h1 {
+  font-family: 'Agdasima', sans-serif;
+  text-transform: uppercase;
+  color: #bbbbbb;
+  font-size: 1.4rem;
+}
+
+a, a:visited {
+  color: #bbbbbb;
+}
+
+a:active, a:hover, a:focus {
   color: #f58d16;
 }
 
