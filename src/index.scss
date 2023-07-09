@@ -1,4 +1,4 @@
-// @use '../node_modules/sass-mq/mq' with (
+// @use 'sass-mq/mq' with (
 //   $media-type: screen
 // );
 
@@ -12,7 +12,7 @@ body {
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
 
-  background-color: #1f1b29;
+  background-color: #12101e;
   color: #888888;
 
   min-width: 240px;
@@ -20,7 +20,17 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', sans-serif;
+  font-weight: normal;
   text-transform: uppercase;
+  
+  // text-decoration: underline;
+  // text-decoration-thickness: 8pt;
+  // text-decoration-color: #f58d16;
+  // text-underline-offset: 0rem;
+
+  //border-bottom: 4pt solid #f58d16;
+    
+  //text-underline-position: 20px;
   color: #eeeeee;
 }
 
@@ -31,8 +41,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.4rem;
 }
 
-a, a:visited {
-  color: #bbbbbb;
+a, a:link, a:visited {
+  color: #f7d259;
 }
 
 a:active, a:hover, a:focus {

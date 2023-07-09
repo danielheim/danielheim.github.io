@@ -30,19 +30,19 @@
 		"items": [
 			{
 				"id": "game",
-				"title": "Game Development",
+				"title": "Games",
 				"desc": "I have experience with game development, including Unity3D, C#, and JavaScript.",
 				"img": "what-game-dev.svg"
 			},
 			{
 				"id": "mobile",
-				"title": "Mobile Development",
+				"title": "Mobile",
 				"desc": "I have experience with both native (Android, iOS) and hybrid mobile (Xamarin, React Native) development.",
 				"img": "what-game-dev.svg"
 			},
 			{
 				"id": "web",
-				"title": "Web Development",
+				"title": "Web",
 				"desc": "I have experience with a wide range of web technologies, including the latest in HTML, CSS and JavaScript/Typescript.",
 				"img": "what-game-dev.svg"
 			}

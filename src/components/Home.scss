@@ -1,4 +1,4 @@
-@use '../../node_modules/sass-mq/mq' with (
+@use 'sass-mq/mq' with (
   $media-type: screen
 );
 
@@ -11,6 +11,13 @@
 			max-height: 100px;
 			aspect-ratio: 1;
 		}
+	}
+
+	.home__title {
+		font-size: 4em;
+		font-weight: bold;	
+		margin-top: 0.25em;
+		margin-bottom: 0em;
 	}
 
 	#services {
@@ -42,13 +49,14 @@
 		gap: 1em;
 		list-style: none;
 		padding: 0;
+		margin: 1.5em auto;
 		
 		svg {
-			width: 24px;
-			height: 24px;
+			width: 1.5em;
+			height: 1.5rem;
 			@include mq.mq($until: desktop) {
-				width: 44px;
-				height: 44px;
+				width: 3em;
+				height: 3em;
 			}
 		}
 	}	

@@ -67,10 +67,10 @@ function Home() {
 	return <main id='home'>
 		<div className='section'>
 			<header>
-				<h1>{home.title}</h1>
+				<h1 className='home__title'>{home.title}</h1>
 				<p className='subtitle'>{home.subtitle}</p>
-				<p dangerouslySetInnerHTML={{ __html: home.desc }} />
 			</header>
+			<p dangerouslySetInnerHTML={{ __html: home.desc }} />
 			<ul id='socials'>
 				{home.socials.map(parseSocial)}
 			</ul>
