@@ -1,3 +1,7 @@
+@use 'sass-mq/mq' with (
+  $media-type: screen
+);
+
 .app {
 
   > * {
@@ -10,10 +14,17 @@
 }
 
 .section {
-  padding: 0.25em 1.5em;
+  padding: 1em 1.5em;
+
+  .desc {
+    @include mq.mq($from: desktop) {
+      max-width: 80%;
+    }
+  }
 
   article {
-    background-color: rgba($color: #ffffff, $alpha: 0.05);
+    //background-color: rgba($color: #ffffff, $alpha: 0.05);
+    background: linear-gradient(rgba($color: #ffffff, $alpha: 0.02), rgba($color: #ffffff, $alpha: 0.05));
     padding: 1.5em;
     margin-bottom: 1.5em;
     border-top: 1pt solid rgba($color: #ffffff, $alpha: 0.05);

@@ -27,7 +27,7 @@ function Content(props) {
 		<header>
 			<h1>{props.title}</h1>
 		</header>
-		{props.desc && <div>
+		{props.desc && <div className='desc'>
 			{props.desc.split(/\n+/g).map((desc, index) => <p key={index} dangerouslySetInnerHTML={{__html: desc}} />)}
 		</div>}
 		{ props.items?.length > 0 && <div className='articles'>
@@ -70,7 +70,9 @@ function Home() {
 				<h1 className='home__title'>{home.title}</h1>
 				<p className='subtitle'>{home.subtitle}</p>
 			</header>
-			<p dangerouslySetInnerHTML={{ __html: home.desc }} />
+			<div className='desc'>
+				<p dangerouslySetInnerHTML={{ __html: home.desc }} />
+			</div>
 			<ul id='socials'>
 				{home.socials.map(parseSocial)}
 			</ul>

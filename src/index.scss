@@ -15,6 +15,8 @@ body {
   background-color: #12101e;
   color: #888888;
 
+  line-height: 1.5;
+
   min-width: 240px;
 }
 
@@ -22,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', sans-serif;
   font-weight: normal;
   text-transform: uppercase;
+  line-height: 1;
   
   // text-decoration: underline;
   // text-decoration-thickness: 8pt;
