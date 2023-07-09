@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #eeeeee;
 }
 
+strong {
+  color: #bbbbbb;
+}
+
 .subtitle, article h1 {
   font-family: 'Agdasima', sans-serif;
   text-transform: uppercase;
@@ -42,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:link, a:visited {
-  color: #f7d259;
+  color: #bbbbbb;
 }
 
 a:active, a:hover, a:focus {
