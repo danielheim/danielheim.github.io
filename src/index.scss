@@ -2,18 +2,25 @@
 //   $media-type: screen
 // );
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Outfit&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Aleo&family=Outfit&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Aleo&family=Outfit&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Aleo&family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Outfit&family=Rubik:wght@300;700&family=Josefin+Sans&display=swap');
+
+$color-heading: darken(#ffffff, 4%);
+$color-subheading: darken(#ffffff, 12%);
+$color-text: darken(#ffffff, 32%);
 
 body {
   margin: 0;
-  font-family: 'Aleo', serif;
+  font-family: 'Rubik', serif;
+  font-weight: 300;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
 
   background-color: #12101e;
-  color: #888888;
+
+  color: $color-text;
 
   line-height: 1.5;
 
@@ -21,35 +28,26 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   line-height: 1;
-  
-  // text-decoration: underline;
-  // text-decoration-thickness: 8pt;
-  // text-decoration-color: #f58d16;
-  // text-underline-offset: 0rem;
-
-  //border-bottom: 4pt solid #f58d16;
-    
-  //text-underline-position: 20px;
-  color: #eeeeee;
+  color: $color-heading;
 }
 
 strong {
-  color: #bbbbbb;
+  color: $color-subheading;
 }
 
 .subtitle, article h1 {
   font-family: 'Agdasima', sans-serif;
   text-transform: uppercase;
-  color: #bbbbbb;
+  color: $color-subheading;
   font-size: 1.4rem;
 }
 
 a, a:link, a:visited {
-  color: #bbbbbb;
+  color: $color-subheading;
 }
 
 a:active, a:hover, a:focus {

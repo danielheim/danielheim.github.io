@@ -1,37 +1,51 @@
 import { useLoaderData } from "react-router";
+import cx from 'classnames';
 import './Home.scss';
 
 import { ReactComponent as GithubSvg } from '../images/github.svg';
 import { ReactComponent as LinkedinSvg } from '../images/linkedin.svg';
 import { ReactComponent as TwitterSvg } from '../images/twitter.svg';
 
+function Desc(props) {
+	if (!props.desc) return null;
+	return <div className={cx('desc', { 'desc--thin': props.thin })}>
+		{props.desc.split(/\n+/g).map((desc, index) => <p
+			key={index}
+			dangerouslySetInnerHTML={{ __html: desc }}
+			/>
+		)}
+	</div>
+}
+
 function Content(props) {
 
-	function Items(props) {
-		return <article key={props.id} id={props.id}>
-			<div>
-				{ props.img && <img src={props.img} alt='*' /> }
-			</div>
+	function Item(props) {
+		return <article className={props.blockName} key={props.id} id={props.id}>
+			{ props.img && <img
+				className={`${props.blockName}__img`}
+				src={props.img}
+				alt=''
+			/> }
 			<div>
 				<header>
 					<h1>{props.title}</h1>
 				</header>
-				<div>
-					{props.desc.split(/\n+/g).map((desc, index) => <p key={index}>{desc}</p>)}
-				</div>
+				<Desc desc={props.desc} />
 			</div>
 		</article>
 	}
 
-	return <section id={props.id} className='section'>
+	return <section id={props.id} className={props.blockName}>
 		<header>
-			<h1>{props.title}</h1>
+			<h1 className={`${props.blockName}__title`}>{props.title}</h1>
 		</header>
-		{props.desc && <div className='desc'>
-			{props.desc.split(/\n+/g).map((desc, index) => <p key={index} dangerouslySetInnerHTML={{__html: desc}} />)}
-		</div>}
-		{ props.items?.length > 0 && <div className='articles'>
-			{props.items?.map(i => <Items key={i.id} {...i} />)}
+		<Desc desc={props.desc} thin={true} />
+		{ props.items?.length > 0 && <div className={`${props.blockName}__articles`}>
+			{props.items?.map(i => <Item
+				key={i.id}
+				blockName={`${props.blockName}_article`}
+				{...i}
+			/>)}
 		</div> }
 	</section>
 }
@@ -64,24 +78,26 @@ function Home() {
 		</li>
 	}
 
-	return <main id='home'>
+	return <>
 		<div className='section'>
-			<header>
-				<h1 className='home__title'>{home.title}</h1>
-				<p className='subtitle'>{home.subtitle}</p>
-			</header>
-			<div className='desc'>
-				<p dangerouslySetInnerHTML={{ __html: home.desc }} />
+			<div className='home'>
+				<header>
+					<h1 className='home__title'>{home.title}</h1>
+					<p className='home__subtitle'>{home.subtitle}</p>
+				</header>
+				<Desc desc={home.desc} thin={true} />
+				<ul className='home__socials'>
+					{home.socials.map(parseSocial)}
+				</ul>
 			</div>
-			<ul id='socials'>
-				{home.socials.map(parseSocial)}
-			</ul>
 		</div>
-		<div>
-			<Content id='about' {...about} />
-			<Content id='services' {...services} />
+		<div className='section'>
+			<Content blockName='about' {...about} />
 		</div>
-	</main>
+		<div className='section'>
+			<Content blockName='services' {...services} />
+		</div>
+	</>
 }
 
 export default Home;

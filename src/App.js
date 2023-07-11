@@ -3,7 +3,7 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="app">
+    <div className='app'>
       {/* <header>
         <p>Daniel Heim</p>
         <nav>
@@ -13,10 +13,12 @@ function App() {
           </ul>
         </nav>
       </header> */}
-      <Outlet />
-      <footer>
+      <main className='app__item'>
+        <Outlet />
+      </main>
+      <footer className='app__item'>
         <div className='section'>
-        <p>&copy; Daniel Heim</p>
+          <p>&copy; Daniel Heim</p>
         </div>
       </footer>
     </div>
