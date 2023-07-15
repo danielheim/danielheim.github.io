@@ -31,13 +31,13 @@
 			{
 				"id": "game",
 				"title": "Games",
-				"desc": "I have experience with game development, including Unity3D, C#, and JavaScript.",
+				"desc": "I am well-versed in game development, using Unity3D, C#, or JavaScript libraries to create immersive experiences with captivating mechanics.\nYou may have experienced some of my work in the award winning <a href='https://agentagame.com' target='_blank' rel='noopener noreferrer'>Agent A: A Puzzle In Disguise.</a>",
 				"img": "what-game-dev.svg"
 			},
 			{
 				"id": "mobile",
 				"title": "Mobile",
-				"desc": "I have experience with both native (Android, iOS) and hybrid mobile (Xamarin, React Native) development.",
+				"desc": "With profieiency in both native and modern hybrid approaches to mobile development, I have produced innumerable applications with sleek and responsive designs. I am experienced with <strong>Android</strong> and <strong>iOS SDKs</strong>, and I've recently picked up <strong>React Native</strong>.\nMost recently, I lead development of the <a href='https://movember.com/get-the-movember-app' target='_blank' rel='noopener noreferrer'>Movember</a> mobile application which saw <strong>$32 million</strong> in donations flow through app users in four weeks.",
 				"img": "what-game-dev.svg"
 			},
 			{

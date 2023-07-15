@@ -48,10 +48,12 @@ strong {
 
 a, a:link, a:visited {
   color: $color-subheading;
+  text-decoration: none;
 }
 
 a:active, a:hover, a:focus {
   color: #f58d16;
+  text-decoration: underline;
 }
 
 code {
