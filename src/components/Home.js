@@ -76,7 +76,7 @@ function Home() {
 		<section className='section'>
 			<Content blockName='intro' {...intro} >
 				<ul className='intro__socials'>
-					{intro.socials.map(v => <Social {...v} />)}
+					{intro.socials.map(v => <Social key={v.id} {...v} />)}
 				</ul>
 			</Content>
 		</section>
@@ -87,7 +87,7 @@ function Home() {
 		<section className='section'>
 			<Content blockName='services' {...services}>
 				<div className='services__articles'>
-				{services.items.map(v => <Item blockName='services_article' {...v} />)}
+				{services.items.map(v => <Item key={v.id} blockName='services_article' {...v} />)}
 				</div>
 			</Content>
 		</section>
