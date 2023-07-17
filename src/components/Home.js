@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router";
 import cx from 'classnames';
+import { getAnalytics, logEvent } from "firebase/analytics";
 import './Home.scss';
 
 import { ReactComponent as GithubSvg } from '../images/github.svg';
@@ -46,6 +47,11 @@ function Content(props) {
 }
 
 function Home() {
+
+	logEvent(getAnalytics(), 'screen_view', {
+		firebase_screen: 'home',
+		firebase_screen_class: 'Home'
+	});
 
 	const {
 		intro,
