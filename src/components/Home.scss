@@ -2,7 +2,7 @@
   $media-type: screen
 );
 
-.home {
+.intro {
 
 	&__title {
 		font-size: 4em;
@@ -46,7 +46,7 @@
 
 .services {
 
-	.services__articles {
+	&__articles {
 		display: grid;
 		gap: 1.5em;
 		
