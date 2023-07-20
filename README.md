@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 $ npm start
 
 # Deploy to GitHub pages via `gh-pages` (live)
-$ npm deploy
+$ npm run deploy
 ```
 
 # Attibutions #
