@@ -9,3 +9,6 @@ $ npm start
 # Deploy to GitHub pages via `gh-pages` (live)
 $ npm deploy
 ```
+
+# Attibutions #
+Images - https://www.flaticon.com/packs/vintage-devices-17

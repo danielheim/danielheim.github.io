@@ -9,22 +9,26 @@ import { ReactComponent as TwitterSvg } from '../images/twitter.svg';
 
 function Desc(props) {
 	if (!props.desc) return null;
-	return <div className={cx('desc', { 'desc--thin': props.thin })}>
+	return <div className={cx({
+		[`${props.blockName}__desc`]: props.blockName,
+		'desc': true,
+		'desc--thin': props.thin
+	})}>
 		{props.desc.split(/\n+/g).map((desc, index) => <p
 			key={index}
 			dangerouslySetInnerHTML={{ __html: desc }}
-			/>
+		/>
 		)}
 	</div>
 }
 
 function Item(props) {
 	return <article className={props.blockName} key={props.id} id={props.id}>
-		{ props.img && <img
+		{props.img && <img
 			className={`${props.blockName}__img`}
 			src={props.img}
 			alt=''
-		/> }
+		/>}
 		<div>
 			<header>
 				<h1>{props.title}</h1>
@@ -39,10 +43,10 @@ function Content(props) {
 	return <div id={props.id} className={props.blockName}>
 		<header>
 			<h1 className={`${props.blockName}__title`}>{props.title}</h1>
-			{ props.subtitle && <p className={`${props.blockName}__subtitle`}>{props.subtitle}</p> }
+			{props.subtitle && <p className={`${props.blockName}__subtitle`}>{props.subtitle}</p>}
 		</header>
-		<Desc desc={props.desc} thin={true} />
-		{ props.children }
+		<Desc blockName={props.blockName} desc={props.desc} thin={true} />
+		{props.children}
 	</div>
 }
 
@@ -61,12 +65,14 @@ function Home() {
 
 	const Social = (props) => {
 
-		const svg = (() => { switch (props.id) {
-			case 'github': return <GithubSvg />;
-			case 'linkedin': return <LinkedinSvg />;
-			case 'twitter': return <TwitterSvg />;
-			default: return null;
-		}})();
+		const svg = (() => {
+			switch (props.id) {
+				case 'github': return <GithubSvg />;
+				case 'linkedin': return <LinkedinSvg />;
+				case 'twitter': return <TwitterSvg />;
+				default: return null;
+			}
+		})();
 
 		return <li key={props.id} id={props.id}>
 			<a
@@ -93,7 +99,7 @@ function Home() {
 		<section className='section'>
 			<Content blockName='services' {...services}>
 				<div className='services__articles'>
-				{services.items.map(v => <Item key={v.id} blockName='services_article' {...v} />)}
+					{services.items.map(v => <Item key={v.id} blockName='services_article' {...v} />)}
 				</div>
 			</Content>
 		</section>
