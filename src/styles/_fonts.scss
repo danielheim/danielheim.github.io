@@ -1,10 +1,20 @@
 @import "./colors";
 
-@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Rubik:wght@300;700&family=Josefin+Sans&family=Saira+Semi+Condensed&display=swap");
+@font-face {
+	font-family: 'Norwester';
+	src: url('../fonts/norwester.otf') format('opentype')
+}
 
-$font-family-body: "Rubik", serif;
-$font-family-headings: "Josefin Sans", serif;
-$font-family-subheadings: "Saira Semi Condensed", serif;
+@font-face {
+	font-family: 'Kollektif';
+	src: url('../fonts/kollektif/Kollektif.ttf') format('truetype')
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+$font-family-body: Rubik, sans-serif;
+$font-family-headings: Norwester, sans-serif;
+$font-family-subheadings: Kollektif, serif;
 
 %subheading {
   color: $color-subheading;
