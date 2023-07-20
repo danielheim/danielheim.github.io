@@ -17,7 +17,7 @@ function App() {
         <Outlet />
       </main>
       <footer className='app__item'>
-        <div className='section'>
+        <div className='section footer'>
           <p>&copy; Daniel Heim</p>
         </div>
       </footer>
