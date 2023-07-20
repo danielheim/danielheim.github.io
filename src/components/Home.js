@@ -42,7 +42,11 @@ function Content(props) {
 
 	return <div id={props.id} className={props.blockName}>
 		<header>
-			<h1 className={`${props.blockName}__title`}>{props.title}</h1>
+			<h1 className={cx(
+				'heading',
+				{'heading--large': props.isHeadingLarge},
+				`${props.blockName}__title`
+			)}>{props.title}</h1>
 			{props.subtitle && <p className={`${props.blockName}__subtitle`}>{props.subtitle}</p>}
 		</header>
 		<Desc blockName={props.blockName} desc={props.desc} thin={true} />
@@ -86,7 +90,7 @@ function Home() {
 
 	return <>
 		<section className='section'>
-			<Content blockName='intro' {...intro} >
+			<Content blockName='intro' isHeadingLarge={true} {...intro} >
 				<ul className='intro__socials'>
 					{intro.socials.map(v => <Social key={v.id} {...v} />)}
 				</ul>
