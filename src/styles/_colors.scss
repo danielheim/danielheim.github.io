@@ -1,6 +1,12 @@
-$color-white: #ffffff;
 
-$color-text: darken($color-white, 32%);
-$color-heading: darken($color-white, 4%);
-$color-subheading: darken($color-white, 12%);
-$color-text-footer: darken($color-white, 64%);
+// Palette
+$-color-white: #ffffff;
+$-color-orange: #f58d16;
+
+// Theme
+$color-text: darken($-color-white, 32%);
+$color-heading: darken($-color-white, 4%);
+$color-subheading: darken($-color-white, 12%);
+$color-text-footer: darken($-color-white, 64%);
+
+$color-accent: $-color-orange;

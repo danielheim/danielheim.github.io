@@ -1,10 +1,9 @@
 @import './styles/colors';
-
-@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Outfit&family=Rubik:wght@300;700&family=Josefin+Sans&display=swap');
+@import './styles/fonts';
 
 body {
   margin: 0;
-  font-family: 'Rubik', serif;
+  font-family: $font-family-body;
   font-weight: 300;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
@@ -19,11 +18,15 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: $font-family-headings;
   font-weight: normal;
   text-transform: uppercase;
   line-height: 1;
   color: $color-heading;
+}
+
+h1 {
+  font-size: 1.5em;
 }
 
 strong {
@@ -31,10 +34,7 @@ strong {
 }
 
 .subtitle, article h1 {
-  font-family: 'Agdasima', sans-serif;
-  text-transform: uppercase;
-  color: $color-subheading;
-  font-size: 1.4rem;
+  @extend %subheading;
 }
 
 a, a:link, a:visited {
@@ -43,11 +43,6 @@ a, a:link, a:visited {
 }
 
 a:active, a:hover, a:focus {
-  color: #f58d16;
+  color: $color-accent;
   text-decoration: underline;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

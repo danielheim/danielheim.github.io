@@ -1,0 +1,14 @@
+@import "./colors";
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Rubik:wght@300;700&family=Josefin+Sans&family=Saira+Semi+Condensed&display=swap");
+
+$font-family-body: "Rubik", serif;
+$font-family-headings: "Josefin Sans", serif;
+$font-family-subheadings: "Saira Semi Condensed", serif;
+
+%subheading {
+  color: $color-subheading;
+  font-family: $font-family-subheadings;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}

@@ -2,19 +2,18 @@
   $media-type: screen
 );
 
+@import '../styles/fonts';
+
 .intro {
 
 	&__title {
-		font-size: 4em;
+		font-size: 3em;
 		margin-top: 0.25em;
 		margin-bottom: 0em;
 	}
 
 	&__subtitle {
-		font-family: 'Agdasima', sans-serif;
-		text-transform: uppercase;
-		color: #bbbbbb;
-		font-size: 1.4rem;
+		@extend %subheading;
 		margin: 0.5em auto;
 	}
 
